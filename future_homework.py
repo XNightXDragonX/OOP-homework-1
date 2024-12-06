@@ -1,4 +1,5 @@
 class Student:
+
     def __init__(self, name, surname, gender):
         self.name = name
         self.surname = surname
@@ -47,6 +48,7 @@ class Student:
         else:
             return self.counting_average_grade() == other.counting_average_grade()
 
+
 def avarage_student_course_grade(students, course_name):
         total_grades = []
         for student in students:
@@ -59,12 +61,14 @@ def avarage_student_course_grade(students, course_name):
 
 
 class Mentor:
+
     def __init__(self, name, surname):
         self.name = name
         self.surname = surname
 
 
 class Lecturer(Mentor):
+
     def __init__(self, name, surname):
         super().__init__(name, surname)
         self.courses_attached = []
@@ -93,6 +97,7 @@ class Lecturer(Mentor):
         else:
             return self.counting_average_grade_l() == other.counting_average_grade_l()
 
+
 def average_lecturer_course_grade(lecturers, course_name):
         total_grades_l = []
         for lecturer in lecturers:
@@ -103,7 +108,9 @@ def average_lecturer_course_grade(lecturers, course_name):
         else:
             return 0
 
+
 class Reviewer(Mentor):
+    
     def __init__(self, name, surname):
         super().__init__(name, surname)
 
@@ -119,6 +126,7 @@ class Reviewer(Mentor):
     def __str__(self):
         return (f"Имя: {self.name}\n"
                 f"Фамилия: {self.surname}\n")
+
 
 student_1 = Student('Sasaki', 'Haise', 'male')
 student_2 = Student('Kaneki', 'Ken', 'male')
